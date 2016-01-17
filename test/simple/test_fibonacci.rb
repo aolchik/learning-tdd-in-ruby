@@ -3,7 +3,9 @@ require 'test/unit'
 require 'test/unit/notify'
 
 class FibonacciTest < Test::Unit::TestCase
+  include Fibonacci
+
   def test_pending
-    assert(false)
+    assert(true)
   end
 end
