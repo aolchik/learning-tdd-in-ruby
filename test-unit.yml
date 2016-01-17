@@ -1,0 +1,4 @@
+runner: console
+console_options:
+  output_level: 2
+  show_detail_immediately: false
