@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (8.2.1)
     power_assert (0.2.7)
     rake (10.5.0)
     terminal-notifier (1.6.3)
@@ -13,6 +14,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  byebug (= 8.2.1)
   rake (= 10.5.0)
   terminal-notifier (= 1.6.3)
   test-unit (= 3.1.7)
