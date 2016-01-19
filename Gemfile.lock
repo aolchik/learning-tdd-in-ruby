@@ -2,13 +2,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     byebug (8.2.1)
-    diff-lcs (1.2.5)
+    metaclass (0.0.4)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
     power_assert (0.2.7)
     rake (10.5.0)
-    rspec-mocks (3.4.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.4.0)
-    rspec-support (3.4.1)
     terminal-notifier (1.6.3)
     test-unit (3.1.7)
       power_assert
@@ -20,8 +18,8 @@ PLATFORMS
 
 DEPENDENCIES
   byebug (= 8.2.1)
+  mocha (= 1.1.0)
   rake (= 10.5.0)
-  rspec-mocks (= 3.4.1)
   terminal-notifier (= 1.6.3)
   test-unit (= 3.1.7)
   test-unit-notify (= 1.0.4)
