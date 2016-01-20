@@ -30,11 +30,6 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
     # using a new branch)
 
     # Arrange
-    # This code could be extracted to the 
-    # approach below.
-    # It is being duplicated here to facilitate 
-    # understanding.
-
     resultToInject = 100.0;
     expectedOutput = "100,00"
 
@@ -51,8 +46,43 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
     # Assert
     assert_equal(expectedOutput, actualOutput,
       "decimal separator change")
+
+    # Code above was extracted to a single method
+    assert_alternate_separator_behaviour(
+        "single thousand separator", 1000, 
+        ".", ",", "1.000,00")
+
+    assert_alternate_separator_behaviour(
+        "multiple thousand separators", 
+            1000000000, ".", ",", 
+            "1.000.000.000,00");
+
+    assert_alternate_separator_behaviour(
+        "thousand separator on negative numbers", 
+            -45000, ".", ",", "-45.000,00");
+
   end
 
+  private
+
+  def assert_alternate_separator_behaviour(msg, 
+    resultToInject, thousandSeparator, decimalSeparator, 
+    expectedOutput)
+
+    # Arrange
+    mockedCalculator = mock()
+    mockedCalculator.expects(:result).returns(resultToInject)
+    display = CalculatorDisplay.new(mockedCalculator)
+
+    display.thousandSeparator= "."
+    display.decimalSeparator= ","
+
+    # Act
+    actualOutput = display.show()
+
+    # Assert
+    assert_equal(expectedOutput, actualOutput, msg)
+  end
 
 
 end

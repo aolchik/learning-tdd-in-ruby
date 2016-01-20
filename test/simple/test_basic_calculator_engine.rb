@@ -48,20 +48,17 @@ class BasicCalculatorEngineTest < Test::Unit::TestCase
       "stores result")
   end
 
-  def test_subtracts
-    pend
+  
+  def subtracts
   end
 
-  def test_clears 
-    pend
+  def clears 
   end
 
-  def test_divides
-    pend
+  def divides
   end
 
-  def test_raises_exception_on_division_by_zero
-    pend
+  def raises_exception_on_division_by_zero
   end
   
 
