@@ -24,7 +24,6 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
   end
 
   def test_showsAlternateSeparators()
-    pend()
     # How to write a test when we still don't 
     # know the underlying technology enough?
     # spike! (i.e. using a separate folder or 
