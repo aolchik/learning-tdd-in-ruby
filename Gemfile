@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'actionview', '4.2.5'
 gem 'byebug', '8.2.1'
 gem 'mocha', '1.1.0'
 gem 'rake', '10.5.0'

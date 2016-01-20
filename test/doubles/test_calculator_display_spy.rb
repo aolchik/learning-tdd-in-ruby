@@ -4,7 +4,6 @@ require 'test/unit'
 require 'test/unit/notify'
 require 'mocha/test_unit'
 
-
 class CalculatorDisplaySpyTest < Test::Unit::TestCase
 
   def test_shows_default_separator()
@@ -24,7 +23,7 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
       "standard decimal separator")
   end
 
-  def teste_showsAlternateSeparators()
+  def test_showsAlternateSeparators()
     pend()
     # How to write a test when we still don't 
     # know the underlying technology enough?
@@ -36,6 +35,7 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
     # approach below.
     # It is being duplicated here to facilitate 
     # understanding.
+
     resultToInject = 100.0;
     expectedOutput = "100,00"
 
@@ -43,9 +43,8 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
     mockedCalculator.expects(:result).returns(resultToInject)
     display = CalculatorDisplay.new(mockedCalculator)
 
-    thousandSeparator = "."
-    decimalSeparator = ","
-    display.setSeparators(thousandSeparator, decimalSeparator)
+    display.thousandSeparator= "."
+    display.decimalSeparator= ","
 
     # Act
     actualOutput = display.show()
