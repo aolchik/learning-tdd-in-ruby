@@ -20,7 +20,8 @@ guard :test do
   watch('test/test_helper.rb')  { 'test' }
 
   # Non-rails
-  watch(%r{^app/(.+)\.rb$}) { |m| "test/#{m[1]}_test.rb" }
+  watch(%r{^app/integration/(.+)\.rb$}) { 'test/integration'}
+
 
   # Rails 4
   # watch(%r{^app/(.+)\.rb})                               { |m| "test/#{m[1]}_test.rb" }

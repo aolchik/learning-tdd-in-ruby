@@ -60,7 +60,15 @@ class CalculatorDisplaySpyTest < Test::Unit::TestCase
     assert_alternate_separator_behaviour(
         "thousand separator on negative numbers", 
             -45000, ".", ",", "-45.000,00");
+  end
 
+  def show_specific_numer_of_decimals()
+  end
+
+  def show_hexadecimal_representation()
+  end
+
+  def show_binary_representation()
   end
 
   private
