@@ -18,6 +18,13 @@
 module Fibonacci
 
   def fibonacci(num)
+    if(num > 2)
+      fibonacci(num-1) + fibonacci(num-2)
+    elsif(num >= 1)
+      1
+    else
+      0
+    end
   end
 
 end
